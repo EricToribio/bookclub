@@ -16,6 +16,14 @@ public class UserService {
     
     @Autowired
     private UserRepository userRepo;
+
+    public User getUserById(Long id) {
+		Optional<User> optionalUser=userRepo.findById(id);
+		if(optionalUser.isPresent()) {
+			return optionalUser.get();
+		}
+		else return null;
+	}
     
     // TO-DO: Write register and login methods!
     public User register(User newUser, BindingResult result) {

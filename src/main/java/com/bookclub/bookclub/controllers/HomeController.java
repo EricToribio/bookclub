@@ -25,7 +25,7 @@ public class HomeController {
     @GetMapping("/")
     public String index(Model model, HttpSession session) {
         if(session.getAttribute("user_id") != null){
-            return "redirect:/home";
+            return "redirect:/books";
         }
         // Bind empty User and LoginUser objects to the JSP
         // to capture the form input
@@ -71,7 +71,6 @@ public class HomeController {
             
             return "redirect:/books";
     }
-  
     @PostMapping("/logout")
     public String logout(HttpSession session){
         session.removeAttribute("user_id");

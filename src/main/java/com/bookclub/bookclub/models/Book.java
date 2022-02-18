@@ -39,6 +39,8 @@ public class Book {
     @Size(min=15, max=200, message = "My Thoughts must be at least 15 characters long" )
     private String thoughts;
 
+
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id")
     private User user;
@@ -50,6 +52,8 @@ public class Book {
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date updatedAt;
 
+    
+
     @PrePersist
     protected void onCreate() {
         this.createdAt = new Date();
@@ -59,6 +63,15 @@ public class Book {
     protected void onUpdate() {
         this.updatedAt = new Date();
     }
+    
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     public Long getId() {
         return id;
     }
@@ -91,13 +104,7 @@ public class Book {
         this.thoughts = thoughts;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
+   
 
     public Date getCreatedAt() {
         return createdAt;
