@@ -24,7 +24,20 @@
 </head>
 <body>
     <!-- Enter body here -->
-    ${user_id}   
-   
+    <Table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author Name</th>
+                <th>Posted By</th>
+            </tr>
+        </thead>
+        <tbody>
+            <c:forEach var = "i"items="">
+                     Item <c:out value = "i"/><p>
+            </c:forEach>
+        </tbody>
+    </Table>
 </body>
 </html>
