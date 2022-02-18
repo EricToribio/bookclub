@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BookclubApplication<bookclub>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.bookclub.bookclub.BookclubApplication",
+            "projectName": "bookclub",
+            "args": ""
+        }
+    ]
+}

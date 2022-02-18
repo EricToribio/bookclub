@@ -27,12 +27,12 @@ public class User {
     private String email;
     
     @NotEmpty(message="Password is required!")
-    @Size(min=8, max=128, message="Password must be between 8 and 128 characters")
+    @Size(min=8, max=60, message="Password must be between 8 and 60 characters")
     private String password;
     
     @Transient
     @NotEmpty(message="Confirm Password is required!")
-    @Size(min=8, max=128, message="Confirm Password must be between 8 and 128 characters")
+    @Size(min=8, max=60, message="Confirm Password must be between 8 and 60 characters")
     private String confirm;
   
     public User() {}
